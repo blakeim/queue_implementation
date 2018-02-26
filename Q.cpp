@@ -1,3 +1,4 @@
+#include "Q.h"
 #include <stdio.h>
 #include <iostream>
 
@@ -8,28 +9,6 @@
  * in memory implentation of basic queue
  */
 using namespace std;
-class Q {
-
-    public:
-        // Creates a FIFO byte queue, returning a handle to it.
-        Q * create_queue();
-
-        // Destroy an earlier created byte queue.
-        void destroy_queue(Q * q);
-
-        // Adds a new byte to a queue.
-        void enqueue_byte(Q * q, unsigned char b);
-
-        // Pops the next byte off the FIFO queue
-        unsigned char dequeue_byte(Q * q); 
-
-        int main();
-
-        unsigned char data[2048];
-        int top_pointer, bottom_pointer, count;
-
-};
-
     void on_out_of_memory(){
         printf("%s\n", "Out of memory");
     }
@@ -96,4 +75,8 @@ class Q {
              on_illegal_operation();
         }
 
+    }
+
+    int main(){
+        
     }
